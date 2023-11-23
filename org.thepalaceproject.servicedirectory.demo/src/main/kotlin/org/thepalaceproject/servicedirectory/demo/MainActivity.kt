@@ -30,7 +30,12 @@ class MainActivity : AppCompatActivity(R.layout.main) {
             .commit()
           Unit
         }
-        is ServiceDirectoryStatus.Failed -> Unit
+        is ServiceDirectoryStatus.Failed -> {
+          this.supportFragmentManager.beginTransaction()
+            .replace(R.id.mainFragmentHolder, MainErrorFragment(), "MAIN")
+            .commit()
+          Unit
+        }
         is ServiceDirectoryStatus.Starting -> Unit
       }
     })
