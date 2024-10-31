@@ -1,4 +1,6 @@
 dependencies {
+    coreLibraryDesugaring(libs.android.desugaring)
+
     implementation(project(":org.thepalaceproject.servicedirectory.boot"))
     implementation(project(":org.thepalaceproject.servicedirectory.main"))
 

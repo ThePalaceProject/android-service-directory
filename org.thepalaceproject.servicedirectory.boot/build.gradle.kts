@@ -1,4 +1,6 @@
 dependencies {
+    coreLibraryDesugaring(libs.android.desugaring)
+
     implementation(project(":org.thepalaceproject.servicedirectory.main"))
 
     implementation(libs.androidx.lifecycle.livedata)
